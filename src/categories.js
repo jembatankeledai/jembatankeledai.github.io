@@ -3,7 +3,8 @@ import {HttpClient} from 'aurelia-fetch-client';
 import {activationStrategy} from 'aurelia-router';
 
 @inject(HttpClient)
-export class Welcome{  
+export class Welcome{
+  mnemonics=[]
 
   constructor(http){
     this.http = http;
@@ -22,7 +23,7 @@ export class Welcome{
       .then(mnemonics => this.mnemonics=mnemonics);
   }
 
-  determineActivationStrategy(){
-    return activationStrategy.replace;
-  }
+  //determineActivationStrategy(){
+  //  return activationStrategy.replace;
+  //}
 }
